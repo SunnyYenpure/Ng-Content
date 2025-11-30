@@ -8,15 +8,23 @@
           deserunt eos, numquam dolores atque sunt dolore ut pariatur omnis
           placeat dolorem quibusdam neque et esse. Commodi quo quas nihil.
         </p>
-        <!-- <p class="alert alert-info info1">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores maxime, officiis aliquam blanditiis esse quas est fugit. Tempora suscipit eaque quasi porro rem iste culpa asperiores vero iusto, ab ipsam alias nostrum error neque. Delectus recusandae mollitia tempore earum unde!
+        <p class="alert alert-info info1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
+          maxime, officiis aliquam blanditiis esse quas est fugit. Tempora
+          suscipit eaque quasi porro rem iste culpa asperiores vero iusto, ab
+          ipsam alias nostrum error neque. Delectus recusandae mollitia tempore
+          earum unde!
         </p>
         <p class="alert alert-info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore qui deserunt eos, numquam dolores atque sunt dolore ut pariatur omnis placeat dolorem quibusdam neque et esse. Commodi quo quas nihil.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore qui
+          deserunt eos, numquam dolores atque sunt dolore ut pariatur omnis
+          placeat dolorem quibusdam neque et esse. Commodi quo quas nihil.
         </p>
         <p class="alert alert-info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore qui deserunt eos, numquam dolores atque sunt dolore ut pariatur omnis placeat dolorem quibusdam neque et esse. Commodi quo quas nihil.
-        </p> -->
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore qui
+          deserunt eos, numquam dolores atque sunt dolore ut pariatur omnis
+          placeat dolorem quibusdam neque et esse. Commodi quo quas nihil.
+        </p>
       </app-test>
 
       <hr />
@@ -47,26 +55,125 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores maxime, offici
 
       <hr />
 
-     <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-4 mb-4" *ngFor="let post of postArr">
-          <app-post-card>
-            <h2>{{post.title}}</h2>
-            <p>
-              {{post.body}}
-            </p>
-            <div class="card-action d-flex justify-content-between">
-             <button class="btn btn-sm btn-outline-info" (click)="onEdit(post.id)">Edit</button>
-             <!-- <button class="btn btn-sm btn-outline-info" data-id="'{{post.id}}">Edit</button> -->
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-4 mb-4" *ngFor="let post of postArr">
+            <app-post-card>
+              <h2>{{ post.title }}</h2>
+              <p>
+                {{ post.body }}
+              </p>
+              <div class="card-action d-flex justify-content-between">
+                <button
+                  class="btn btn-sm btn-outline-info"
+                  (click)="onEdit(post.id)"
+                >
+                  Edit
+                </button>
+                <!-- <button class="btn btn-sm btn-outline-info" data-id="'{{post.id}}">Edit</button> -->
 
-<button class="btn btn-sm btn-outline-danger">Remove</button>
-            </div>
-          </app-post-card>
-  
-          
+                <button class="btn btn-sm btn-outline-danger">Remove</button>
+              </div>
+            </app-post-card>
+          </div>
         </div>
       </div>
-     </div>
+
+      <hr />
+
+      <div class="conatiner mt-5">
+        <div class="row">
+          <div class="col-md-4">
+            <app-photos></app-photos>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<hr />
+
+<!-- practice ng-content -->
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <app-test1>
+        <h2>Some Random Heading from Parent To Chilld ...!!!??</h2>
+        <p class="alert alert-primary">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+          suscipit explicabo ab voluptatum quaerat quod blanditiis. Veniam
+          provident debitis facilis?
+        </p>
+      </app-test1>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<!-- example :3 -->
+<div class="container mt-5">
+  <div class="row">
+    <!-- <div class="col-12"> -->
+    <div class="col-md-6">
+      <app-auth1>
+        <h2>Sign-up</h2>
+        <button class="btn btn-primary">Sign-Up</button>
+      </app-auth1>
+    </div>
+    <div class="col-md-6">
+      <app-auth1>
+        <h2>Login</h2>
+        <button class="btn btn-primary">Login</button>
+      </app-auth1>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+
+<hr />
+<hr />
+<hr />
+
+<h3>Ng-Content  Confirm Dailog Box Task...!!</h3>
+<div class="container mt-5">
+  <div class="row">
+   
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+     <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>Title</h2>
+        </div>
+        <div class="card-body">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima inventore incidunt quaerat explicabo. Animi, consectetur.
+
+          </p>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+          <button class="btn btn-sm btn-outline-info">Edit</button>
+          <button
+          (click)="onpostremove()"
+          class="btn btn-sm btn-outline-danger">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-get-confirm 
+[show]="showmodal"
+(emitshowflag)="getshowflag($event)"
+(removeapiflag)="getconfirmation($event)"
+>
+  <h2 class="m-0">Are You sure ,You want to Remove this post?</h2>
+  <p class="m-0">You Can not revert back...!!</p>
+</app-get-confirm>

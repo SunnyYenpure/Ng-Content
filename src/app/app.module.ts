@@ -9,13 +9,21 @@ import {HttpClientModule} from "@angular/common/http"
 // import { PostCardComponent } from './shared/component/post-card/post-card.component';
 
 // import {HttpClientModule} from '@angular/common/http';
-import { PostCardComponent } from './shared/component/post-card/post-card.component'
+import { PostCardComponent } from './shared/component/post-card/post-card.component';
+import { PhotosComponent } from './shared/component/photos/photos.component';
+import { Test1Component } from './shared/component/test1/test1.component';
+import { Auth1Component } from './shared/component/auth1/auth1.component';
+import { GetConfirmComponent } from './shared/component/get-confirm/get-confirm.component'
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     AuthComponent,
     PostCardComponent,
+    PhotosComponent,
+    Test1Component,
+    Auth1Component,
+    GetConfirmComponent,
     // PostCardComponent,
     // PostCardComponent
   ],
